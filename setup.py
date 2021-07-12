@@ -16,7 +16,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'sentry-dingtalk'
+NAME = 'sentry-dingtalk-jedore'
 DESCRIPTION = 'A sentry extension integrates DingTalk robot webhook'
 URL = 'https://github.com/Jedore/sentry-dingtalk'
 EMAIL = 'jedorefight@gmail.com'
@@ -100,7 +100,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    keywords="sentry dingtalk"
+    keywords="sentry dingtalk",
     version=about['__version__'],
     description=DESCRIPTION,
     long_description=long_description,
