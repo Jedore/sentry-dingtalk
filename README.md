@@ -8,16 +8,20 @@ Sentry 集成钉钉机器人通知
 ## 特性
 - 发送异常通知到钉钉
 - 支持钉钉关键字、签名
+- 配置环境变量
+  - DINGTALK_WEBHOOK: Optional(string)
+  - DINGTALK_CUSTOM_KEYWORD: Optional(string)
+  - DINGTALK_SIGNATURE: Optional(string)
 ## 快速使用
 ### 安装
 1. 使用 `pip` 命令
     ```bash
-    $ pip install 
+    $ pip install sentry-dingtalk-jedore
     ```
 
 2. 写入依赖文件 `onpremise-xxx/sentry/requirements.txt`
     ```bash
-    $ echo https://github.com/lostncg/sentry-dingtalk/archive/master.zip >> requirements.txt
+    $ echo sentry-dingtalk-jedore >> requirements.txt
     ```
 
 ### 钉钉机器人
