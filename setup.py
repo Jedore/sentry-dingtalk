@@ -22,7 +22,7 @@ URL = 'https://github.com/Jedore/sentry-dingtalk'
 EMAIL = 'jedorefight@gmail.com'
 AUTHOR = 'Jedore'
 REQUIRES_PYTHON = '>=3.6.13'
-VERSION = '1.0.6'
+VERSION = '1.0.7'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

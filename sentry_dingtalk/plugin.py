@@ -27,7 +27,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
     required_field = "webhook"
     author = "Jedore"
     author_url = "https://github.com/Jedore/sentry-dingtalk"
-    version = "1.0.6"
+    version = "1.0.7"
     resource_links = [
         ("Report Issue", "https://github.com/Jedore/sentry-dingtalk/issues"),
         ("View Source", "https://github.com/Jedore/sentry-dingtalk"),
@@ -67,14 +67,6 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
                 "default": self.set_default(
                     project, "custom_keyword", "DINGTALK_CUSTOM_KEYWORD"
                 ),
-            },
-            {
-                "name": "signature",
-                "label": "Signature",
-                "type": "string",
-                "required": False,
-                "help": "Optional - DingTalk webhook signature",
-                "default": self.set_default(project, "signature", "DINGTALK_SIGNATURE"),
             },
         ]
 
