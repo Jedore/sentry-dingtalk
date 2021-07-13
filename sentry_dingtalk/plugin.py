@@ -27,7 +27,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
     required_field = "webhook"
     author = "Jedore"
     author_url = "https://github.com/Jedore/sentry-dingtalk"
-    version = "1.0.5"
+    version = "1.0.6"
     resource_links = [
         ("Report Issue", "https://github.com/Jedore/sentry-dingtalk/issues"),
         ("View Source", "https://github.com/Jedore/sentry-dingtalk"),
@@ -105,7 +105,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
 
         payload = f"## {custom_keyword}\n\n" if custom_keyword else ""
         payload = f"{payload} #### Project: {project.name} \n\n"
-        payload = f"{payload} ### Error: [{group.title}]({issue_link}) \n\n"
+        payload = f"{payload} #### Error: [{group.title}]({issue_link}) \n\n"
         payload = f"{payload} #### Detail: {group.message} \n\n"
 
         headers = {
