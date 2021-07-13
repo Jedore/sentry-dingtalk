@@ -27,7 +27,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
     required_field = "webhook"
     author = "Jedore"
     author_url = "https://github.com/Jedore/sentry-dingtalk"
-    version = "1.0.4"
+    version = "1.0.5"
     resource_links = [
         ("Report Issue", "https://github.com/Jedore/sentry-dingtalk/issues"),
         ("View Source", "https://github.com/Jedore/sentry-dingtalk"),
