@@ -15,6 +15,8 @@ from shutil import rmtree
 
 from setuptools import find_packages, setup, Command
 
+from sentry_dingtalk.plugin import DingTalkPlugin
+
 # Package meta-data.
 NAME = 'sentry-dingtalk-jedore'
 DESCRIPTION = 'A sentry extension integrates DingTalk robot webhook'
@@ -22,7 +24,7 @@ URL = 'https://github.com/Jedore/sentry-dingtalk'
 EMAIL = 'jedorefight@gmail.com'
 AUTHOR = 'Jedore'
 REQUIRES_PYTHON = '>=3.6.13'
-VERSION = '1.0.3'
+VERSION = DingTalkPlugin.version
 
 # What packages are required for this module to be executed?
 REQUIRED = [

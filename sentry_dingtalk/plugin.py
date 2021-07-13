@@ -27,7 +27,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
     required_field = "webhook"
     author = "Jedore"
     author_url = "https://github.com/Jedore/sentry-dingtalk"
-    version = "1.0.3"
+    version = "1.0.4"
     resource_links = [
         ("Report Issue", "https://github.com/Jedore/sentry-dingtalk/issues"),
         ("View Source", "https://github.com/Jedore/sentry-dingtalk"),
@@ -50,11 +50,11 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
         return [
             {
                 "name": "webhook",
-                "label": "Webhook URL",
+                "label": "webhook",
                 "type": "url",
                 "placeholder": "https://oapi.dingtalk.com/robot/send?access_token=**********",
                 "required": True,
-                "help": "Your custom dingding webhook URL.",
+                "help": "Your custom DingTalk webhook",
                 "default": self.set_default(project, "webhook", "DINGTALK_WEBHOOK"),
             },
             {
@@ -63,17 +63,17 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
                 "type": "string",
                 "placeholder": "e.g. [Sentry] Error title",
                 "required": False,
-                "help": "Optional - A custom keyword as the prefix of the event title",
+                "help": "Optional - custom keyword",
                 "default": self.set_default(
                     project, "custom_keyword", "DINGTALK_CUSTOM_KEYWORD"
                 ),
             },
             {
                 "name": "signature",
-                "label": "Additional Signature",
+                "label": "Signature",
                 "type": "string",
                 "required": False,
-                "help": "Optional - Attach Dingtalk webhook signature to the request headers.",
+                "help": "Optional - DingTalk webhook signature",
                 "default": self.set_default(project, "signature", "DINGTALK_SIGNATURE"),
             },
         ]
