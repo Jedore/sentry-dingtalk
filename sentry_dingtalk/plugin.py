@@ -99,6 +99,7 @@ class DingTalkPlugin(CorePluginMixin, notify.NotificationPlugin):
         payload = f"{payload} #### Project: {project.name} \n\n"
         payload = f"{payload} #### Error: [{group.title}]({issue_link}) \n\n"
         payload = f"{payload} #### Detail: {group.message} \n\n"
+        payload = f"{payload} #### Group: {group} \n\n"
 
         headers = {
             "Content-type": "application/json",
